@@ -23,17 +23,6 @@ def get_stock_data(ticker, start, end):
     return df
 
 
-def calculate_rsi(series, span=14):
-    difference = series.diff()
-    gains = difference.where(difference > 0, 0)
-    losses = difference.where(difference < 0, 0)
-    ort_gains = gains.ewm(span=span, adjust=False).mean()
-    ort_losses = -losses.ewm(span=span, adjust=False).mean()
-    rs = ort_gains / ort_losses
-    rsi = 100 - (100 / (1 + rs))
-    return rsi
-
-
 df_exchange_rates = get_stock_data('TRY=X', '2018-01-01', '2026-06-29')
 df_interest_rates = get_evds_series(
     api_key, ['TP.BISPOLFAIZ.TUR'], '01-01-2018', '29-06-2026')
