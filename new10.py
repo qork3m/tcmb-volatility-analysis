@@ -62,5 +62,6 @@ plt.figtext(0.5, 0.02, "Sources: TCMB, Yfinance",
             ha="center", fontsize=10, color="gray", fontstyle='italic')
 
 plt.tight_layout()
-plt.savefig('volatility.png', dpi=150, bbox_inches='tight')
+plt.savefig(r'C:\Users\gkara\OneDrive\Desktop\Code\tcmb-volatility-analysis\tcmb-volatility-analysis\volatility.png',
+            dpi=150, bbox_inches='tight')
 plt.show()
