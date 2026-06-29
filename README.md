@@ -15,3 +15,6 @@ in mid-2023, the CBRT raised rates sharply and volatility declined steadily.
 
 ## Libraries
 pandas, matplotlib, evds, yfinance, python-dotenv
+
+## Chart
+![Volatility Chart](volatility.png)
